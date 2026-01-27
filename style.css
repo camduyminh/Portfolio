@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 62.5%; // 10px
+  font-size: 62.5%; 
 }
 
 body {
@@ -194,7 +194,7 @@ button:hover {
   height: 80vh;
   display: flex;
   gap: 3.2%;
-  jutify-content: center;
+  justify-content: center;
   align-items: center;
 }
 
@@ -208,11 +208,43 @@ button:hover {
 }
 
 #about {
-  background: var(--accent);
+    padding: calc(var(--grid-unit) * 8) 0;
+    background-color: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#about .intro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 4);
+}
+
+#about .about-info {
+    display: block;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 4);
+    align-items: center;
+}
+#about .about-info .title {
+    font-size: 3.6rem;
+    margin-bottom: calc(var(--grid-unit) * 2);
+    color: #0f2854;
+}
+#about .about-info .desc {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #333333;
+}
+#about .about-ability {
+    display: flex;
+    gap: calc(var(--grid-unit) * 4);
 }
 
 #about .about-avatar {
-  width: 45%;
+  width: 80%;
   overflow: hidden;
   border-radius: 1.6rem;
 }
@@ -226,4 +258,33 @@ button:hover {
 #about .about-avatar img:hover {
   transform: scale(1.2);
   transition: transform 0.8s ease-in-out;
+}
+
+#about .about-info h3 {
+    font-weight: 500;
+    margin-bottom: calc(var(--grid-unit) * 2);
+}
+
+#about .ability-box {
+    background-color: #1c4d8d;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#about .ability-box .title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: calc(var(--grid-unit) * 1);
+}
+#about .ability-box .subtitle {
+    font-size: 1.4rem;
+    color: #e5e7eb;
+    line-height: 1.4;
 }
