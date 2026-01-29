@@ -334,6 +334,9 @@ button:hover {
 }
 
 #skills .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid #cccccc;
   border-radius: 1.2rem;
   padding: 2rem;
@@ -342,4 +345,87 @@ button:hover {
   width: 48px;
   height: 48px;
   margin-bottom: 1.4rem;
+}
+
+#projects {
+  padding: calc(var(--grid-unit) * 8) 0;
+  background-color: var(--light-bg);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#projects .project-head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: auto; 
+  width: 80%;
+  gap: calc(var(--grid-unit) * 2);
+}
+#projects .project-head-box {
+  padding: calc(var(--grid-unit) * 2);
+  border-radius: 1.2rem;
+}
+#projects .section-title {
+  font-size: 3.6rem;
+  text-align: center;
+}
+#projects .project-tag {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--primary);
+  padding-bottom: calc(var(--grid-unit) * 2);
+}
+#projects .view-project {
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--grid-unit) * 3);
+}
+
+.project-link {
+  color: #0f2854;
+}
+#projects .project-items {
+  display: flex;
+  margin: calc(var(--grid-unit) * 4) 0;
+  gap: calc(var(--grid-unit) * 8);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#projects .project-item {
+  width: 32rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#projects .project-item h3 {
+  font-size: 2.4rem;
+  margin: calc(var(--grid-unit) * 2) 0;
+  color: #0f2854;
+}
+#projects .project-item img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+#projects .project-item:hover img {
+  transform: scale(1.1);
+  transition: transform 0.8s ease-in-out;
+}
+#projects .project-item p {
+  font-size: 1.6rem;
+  color: #333333;
+  margin-bottom: calc(var(--grid-unit) * 2);
+  line-height: 1.4;
 }
