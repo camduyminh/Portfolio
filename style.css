@@ -175,6 +175,7 @@ button {
   padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
   text-decoration: none;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 button.solid {
@@ -185,6 +186,16 @@ button.solid {
 button.outline {
   background-color: transparent;
   border: 2px solid #ffffff33;
+}
+
+button.action-view {
+  background-color: white;
+  color: var(--primary);
+  border: none;
+  border-radius: 999px;
+}
+button.action-view:hover {
+  background-color: var(--light-bg);
 }
 
 button:hover {
@@ -307,8 +318,11 @@ button:hover {
   background-color: white;
   color: black;
   display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
+}
+.skill-header {
+  width: 100%;
 }
 #skills .skill-tag {
   text-align: center;
@@ -321,15 +335,18 @@ button:hover {
 }
 #skills .skill-title {
   font-size: 3.6rem;
+  font-weight: 700;
   margin-bottom: calc(var(--grid-unit) * 4);
   text-align: center;
+  color: var(--primary);
 }
 
 #skills .skill-list {
   display: flex;
   padding: calc(var(--grid-unit) * 2);
-  flex-wrap: wrap;
-  gap: calc(var(--grid-unit) * 12);
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  gap: calc(var(--grid-unit) * 4);
   margin-top: calc(var(--grid-unit) * 4);
 }
 
@@ -337,12 +354,20 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #cccccc;
-  border-radius: 1.2rem;
+  cursor: pointer;
+  border: 1px solid #f1f5f9;
+  border-radius: 1.8rem;
   padding: 2rem;
-  min-width: 12rem;
+  min-width: 14rem;
 }
+
+/* #skills .skill-item:hover {
+  transition: transform 0.3s ease;
+  margin-top: -30px;
+} */
+
 #skills .skill-item img {
+  cursor: pointer;
   width: 48px;
   height: 48px;
   margin-bottom: 1.4rem;
@@ -354,19 +379,16 @@ button:hover {
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 #projects .project-head-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: auto; 
-  width: 80%;
+  height: auto;
   gap: calc(var(--grid-unit) * 2);
 }
 #projects .project-head-box {
-  padding: calc(var(--grid-unit) * 2);
   border-radius: 1.2rem;
 }
 #projects .section-title {
@@ -395,14 +417,14 @@ button:hover {
 }
 #projects .project-items {
   display: flex;
-  margin: calc(var(--grid-unit) * 4) 0;
-  gap: calc(var(--grid-unit) * 8);
+  margin: calc(var(--grid-unit) * 6) 0;
+  gap: calc(var(--grid-unit) * 4);
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 #projects .project-item {
-  width: 32rem;
+  flex: 1;
   border-radius: 1.2rem;
   cursor: pointer;
   overflow: hidden;
@@ -416,14 +438,31 @@ button:hover {
 }
 #projects .project-item img {
   width: 100%;
-  height: 25rem;
-  object-fit: cover;
+  object-fit: scale-down;
   border-radius: 1.2rem;
 }
+
 #projects .project-item:hover img {
   transform: scale(1.1);
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
+
+#projects .project-item:hover .project-action {
+  display: flex;
+}
+
+#projects .project-info {
+  margin-top: calc(var(--grid-unit) * 2);
+}
+
+#projects .project-item .project-contain-img {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  position: relative;
+}
+
 #projects .project-item p {
   font-size: 1.6rem;
   color: #333333;
@@ -435,4 +474,38 @@ button:hover {
   padding: calc(var(--grid-unit) * 8) 0;
   background-color: var(--primary);
   height: 40vh;
+}
+.wrap-project {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-action {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.51);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#projects .project-tags {
+  display: flex;
+  gap: 1.6rem;
+  margin: var(--grid-unit) 0;
+}
+
+#projects .project-items .project-tag {
+  background-color: #0f28541a;
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: none;
 }
