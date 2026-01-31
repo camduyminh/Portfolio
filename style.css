@@ -340,6 +340,7 @@ button:hover {
   border: 1px solid #cccccc;
   border-radius: 1.2rem;
   padding: 2rem;
+  min-width: 12rem;
 }
 #skills .skill-item img {
   width: 48px;
@@ -428,4 +429,10 @@ button:hover {
   color: #333333;
   margin-bottom: calc(var(--grid-unit) * 2);
   line-height: 1.4;
+}
+
+#contact {
+  padding: calc(var(--grid-unit) * 8) 0;
+  background-color: var(--primary);
+  height: 40vh;
 }
